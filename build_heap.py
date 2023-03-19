@@ -39,17 +39,17 @@ def main():
         except:
             print("Error while reading file.")
             exit()
-        #swaps = build_heap(data)
-        #print(len(swaps))
+        swaps = build_heap(data)
+        print(len(swaps))
     elif input_type == 'I':
         # input from keyboard
         n = int(input())
         data = list(map(int, input().split()))
-        #swaps = build_heap(data)
-        #print(len(swaps))
+        swaps = build_heap(data)
+        print(len(swaps))
 
-        #for i, j in swaps:
-            #print(i, j)
+        for i, j in swaps:
+            print(i, j)
 
     else:
         print("Invalid input type. " + input_type)
@@ -57,10 +57,11 @@ def main():
 
     # checks if lenght of data is the same as the said lenght
     assert len(data) == n
-    swaps = build_heap(data)
-    print(len(swaps))
-    for i, j in swaps:
-        print(i, j)
+    #swaps = build_heap(data)
+    #print(len(swaps))
+    #for i, j in swaps:
+        #print(i, j)
+
     # calls function to assess the data 
     # and give back all swaps
     #swaps = build_heap(data)
