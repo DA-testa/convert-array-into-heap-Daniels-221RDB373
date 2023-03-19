@@ -32,17 +32,25 @@ def main():
             print("Invalid file name.")
             exit()
         try:
-            input_file = open("test/" + file_name + "r")
-			n = int(input_file.readline())
-			data = list(map(int, input_file.readline().split()))
-			input_file.close()
+            input_file = open("tests/" + file_name)
+            n = int(input_file.readline())
+            data = list(map(int, input_file.readline().split()))
+            input_file.close()
         except:
             print("Error while reading file.")
             exit()
+        swaps = build_heap(data)
+        print(len(swaps))
     elif input_type == 'I':
         # input from keyboard
         n = int(input())
         data = list(map(int, input().split()))
+        swaps = build_heap(data)
+        print(len(swaps))
+
+        for i, j in swaps:
+            print(i, j)
+
     else:
         print("Invalid input type.")
         return
@@ -52,16 +60,15 @@ def main():
 
     # calls function to assess the data 
     # and give back all swaps
-    swaps = build_heap(data)
+    #swaps = build_heap(data)
 
     # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
 
 
     # output all swaps
-    print(len(swaps))
-    for i, j in swaps:
-        print(i, j)
+    #print(len(swaps))
+    
 
 
 if __name__ == "__main__":
