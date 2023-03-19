@@ -25,7 +25,7 @@ def main():
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
-    input_type = input()
+    input_type = input().upper()
     if input_type == 'F':
         file_name = input()
         if 'a' in file_name:
