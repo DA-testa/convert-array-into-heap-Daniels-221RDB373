@@ -52,7 +52,7 @@ def main():
             #print(i, j)
 
     else:
-        print("Invalid input type.")
+        print("Invalid input type. " + input_type)
         return
 
     # checks if lenght of data is the same as the said lenght
